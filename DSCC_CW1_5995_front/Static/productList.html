@@ -1,0 +1,38 @@
+﻿<div class="col-sm-12 right" style="text-align: right">
+    <a ng-click="" href="/#/addProduct"  style="margin: 10px" type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</a>
+</div>
+<div class="row">
+
+    <div class="col-sm-12">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in products">
+                    <th scope="row">{{product.productId}}</th>
+                    <td>{{product.title}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.category.title}}</td>
+                    <td>{{product.description}}</td>
+                    <td>
+                        <a href="/#/editProduct" ng-click="getProduct(product.productId);" style="color: blue" class="glyphicon glyphicon-edit"></a>
+                        <a style="color: red; cursor:pointer" ng-click="deleteProduct(product);" class="glyphicon glyphicon-trash"></a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+</div>
