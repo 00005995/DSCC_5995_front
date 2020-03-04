@@ -18,7 +18,7 @@ app
             });
     })
     .controller('productController', function ($rootScope, $scope, $http) {
-        const url = 'https://localhost:44326/'
+        const url = 'http://54.80.48.222/'
         $scope.getProducts = function () {
             $http({
                 url: url + 'api/products',
